@@ -1,2 +1,2 @@
 This project is for practice purpose
-https://github.com/abusaidshabib/Bali_baba-codezerox-.git
+link:https://abusaidshabib.github.io/Bali_baba-codezerox-/
