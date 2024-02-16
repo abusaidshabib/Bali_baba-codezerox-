@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Bali_baba</title>
+
+    <!-- Additional CSS File -->
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+</head>
+<body>
+
+    <!-- Header or Menu section -->
+    <header class="grid place-items-center">
+        <div class="flex justify-between items-center w-full h-24 xl:px-36 lg:px-20 md:px-16 sm:px-10 px-8">
+            <a href="/index.html">
+                <p class="font-bold text-2xl text-secondary">Bali<span class="text-primary">Baba</span></p>
+            </a>
+            <form class="hidden gap-0 md:flex">
+                <select class="px-5 py-2 outline-none border-2 border-primary-v1 rounded-l-md font-medium text-neural" name="category" id="category">
+                    <option value="">All Category</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Devices">Devices</option>
+                </select>
+                <input class="px-5 py-2 outline-none border-2 border-primary-v1 font-medium text-neural border-x-0" type="text" name="search" id="search" placeholder="Search...">
+                <button class="border-2 border-l-0 pr-5 rounded-r-md" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="md:flex hidden gap-6 text-xl">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="md:hidden" id="hm-menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+        </div>
+        <!-- <div class="bg-primary h-14 w-full md:grid hidden place-items-center">
+            <ul class="flex justify-between items-center lg:gap-28 md:gap-16 gap-12 text-primary-v2 font-medium tracking-wider uppercase text-sm cursor-pointer">
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Home</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Products</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Blogs</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Contact Us</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">About Us</a>
+                </li>
+            </ul>
+        </div> -->
+
+        <div class="bg-primary h-14 w-full md:grid hidden place-items-center">
+            <ul class="flex justify-between items-center lg:gap-28 md:gap-16 gap-12 text-primary-v2 font-medium tracking-wider uppercase text-sm cursor-pointer">
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Home</a>
+                </li>
+                <li class="hover:text-secondary_v2 relative" id="productsDropdown">
+                    <a class="flex gap-1" href="#">Products <svg class="w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/></svg></a>
+                    <ul class="absolute hidden bg-secondary pl-2 py-2 mt-1 rounded-md shadow-lg w-32">
+                        <li class="hover:text-secondary_v2"><a href="/product.html">Product 1</a></li>
+                        <li class="hover:text-secondary_v2"><a href="/product.html">Product 2</a></li>
+                        <li class="hover:text-secondary_v2"><a href="/product.html">Product 3</a></li>
+                        <!-- Add more product links as needed -->
+                    </ul>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Blogs</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Contact Us</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+        
+    </header>
+
+    <!-- sidebar -->
+    <div class="fixed top-0 left-0 h-screen w-screen hidden" id="sidemenu">
+        <div class="bg-white min-w-96 h-full p-10">
+            <button id="close_menu" class="text-center p-5 bg-secondary_v2 text-2xl w-full">x</button>
+            <form class="grid pt-10">
+                <div class="border flex justify-center">
+                    <input class="px-5 py-2 outline-none font-medium text-neural" type="text" name="search" id="search" placeholder="Search...">
+                    <button class="px-8 bg-secondary_v2" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <select class="py-3 px-5 outline-none font-medium text-neural bg-secondary_v2" name="category" id="category">
+                    <option value="">All Category</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Devices">Devices</option>
+                </select>
+            </form>
+            <ul class="grid gap-5 pt-10 items-center text-primary-v2 font-medium tracking-wider uppercase text-sm cursor-pointer">
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Home</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Products</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Blogs</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Contact Us</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">About Us</a>
+                </li>
+            </ul>
+            <div class="flex gap-6 text-xl pt-10">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+        <div class="bg-black opacity-15 h-full w-full"></div>
+    </div>
+
+<!-- Hero section -->
+<section class="relative h-80 mx-6 mt-6">
+    <img class="absolute inset-0 w-full h-full object-cover" src="/assets/images/product hero.jpg" alt="">
+    <div class="absolute inset-0 flex items-center justify-center">
+        <h1 class="text-white text-4xl font-bold">Join our world</h1>
+    </div>
+</section>
+
+<section class="pt-6 mr-6">
+    <div>
+        <h1 class="text-center text-2xl text-secondary font-bold">Men Product</h1>
+    </div>
+    <div class="flex flex-col-4 gap-3 pt-6">
+        <div class="gap-3">
+            <img class="w-full h-[500px] pl-10" src="/assets/images/men1.PNG" alt="">
+            <div class="mt-3">
+                <p class="text-center text-secondary">Chambray Button Down</p>
+                <p class="text-center text-primary font-bold">$68</p>
+            </div>
+        </div>
+        <div class="gap-3">
+            <img class="w-full h-[500px] pl-10" src="/assets/images/men2.PNG" alt="">
+            <div class="mt-3">
+                <p class="text-center text-secondary">Adventure Mobile Terry Pullover</p>
+                <p class="text-center text-primary font-bold">$58</p>
+            </div>
+        </div>
+        <div class="gap-3">
+            <img class="w-full h-[500px] pl-10" src="/assets/images/men3.PNG" alt="">
+            <div class="mt-3">
+                <p class="text-center text-secondary">Polaris Terry Pullover</p>
+                <p class="text-center text-primary font-bold">$58</p>
+            </div>
+        </div>
+        <div class="gap-3">
+            <img class="w-full h-[500px] pl-10" src="assets/images/men4.PNG" alt="">
+            <div class="mt-3">
+                <p class="text-center text-secondary">Pine Bear Tee</p>
+                <p class="text-center text-primary font-bold">$36</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="pt-6 mr-6">
+    <div>
+        <h1 class="text-center text-2xl text-secondary font-bold">Women Product</h1>
+    </div>
+    <div class="flex flex-col-4 gap-3 pt-6">
+        <div class="gap-3">
+            <img class="w-full h-[500px] pl-10" src="assets/images/women1.PNG" alt="">
+            <div class="mt-3">
+                <p class="text-center text-secondary">Adventure Mobile Terry Pullover</p>
+                <p class="text-center text-primary font-bold">$58</p>
+            </div>
+        </div>
+        <div class="gap-3">
+            <img class="w-full h-[500px] pl-10" src="assets/images/women2.PNG" alt="">
+            <div class="mt-3">
+                <p class="text-center text-secondary">Champlain Tank</p>
+                <p class="text-center text-primary font-bold">$36</p>
+            </div>
+        </div>
+        <div class="gap-3">
+            <img class="w-full h-[500px] pl-10" src="assets/images/women3.PNG" alt="">
+            <div class="mt-3">
+                <p class="text-center text-secondary">Gatewood Shirtdress</p>
+                <p class="text-center text-primary font-bold">$108</p>
+            </div>
+        </div>
+        <div class="gap-3">
+            <img class="w-full h-[500px] pl-10" src="assets/images/women4.PNG" alt="">
+            <div class="mt-3">
+                <p class="text-center text-secondary">Avalon Tank</p>
+                <p class="text-center text-primary font-bold">$44</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/2d9122b2bd.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind Config file -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwindConfig.js"></script>
+    <script src="./assets/js/base.js"></script>
+
+    <!-- JavaScript link -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const productsDropdown = document.getElementById('productsDropdown');
+            const dropdownMenu = productsDropdown.querySelector('ul');
+    
+            productsDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownMenu.classList.toggle('hidden');
+            });
+    
+            
+            document.addEventListener('click', function(e) {
+                if (!productsDropdown.contains(e.target)) {
+                    dropdownMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
