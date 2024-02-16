@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Bali_baba</title>
+
+    <!-- Additional CSS File -->
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/home.css">
+    <style>
+       .main-nav__item--toggle .main-nav__item--primary{
+        align-items: flex-end;
+       } 
+       .main-nav__item--toggle .main-nav__item-content{
+        display: inline-flex;
+        align-items: center;
+       }
+       @media(min-width:769px)
+       .main-nav__item--primary, .secondary-nav__item{
+        display: block;
+        margin: 0 1.2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        transition: box-shadow 0.1s;
+        line-height: 1.2rem;
+       }
+       .main-nav__item, .secondary-nav__item{
+        color: brown;
+       }
+       a, .link, .product-spec__value a {
+        color: blue;
+        text-decoration: none;
+       }
+       ::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+       }
+       ::marker {
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
+    text-transform: none;
+    text-indent: 0px !important;
+    text-align: start !important;
+    text-align-last: start !important;
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header or Menu section -->
+    <header class="grid place-items-center">
+        <div class="flex justify-between items-center w-full h-24 xl:px-36 lg:px-20 md:px-16 sm:px-10 px-8">
+            <a href="/index.html">
+                <p class="font-bold text-2xl text-secondary">Bali<span class="text-primary">Baba</span></p>
+            </a>
+            <form class="hidden gap-0 md:flex">
+                <select class="px-5 py-2 outline-none border-2 border-primary-v1 rounded-l-md font-medium text-neural" name="category" id="category">
+                    <option value="">All Category</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Devices">Devices</option>
+                </select>
+                <input class="px-5 py-2 outline-none border-2 border-primary-v1 font-medium text-neural border-x-0" type="text" name="search" id="search" placeholder="Search...">
+                <button class="border-2 border-l-0 pr-5 rounded-r-md" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <div class="md:flex hidden gap-6 text-xl">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="md:hidden" id="hm-menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </div>
+        </div>
+        <div class="bg-primary h-14 w-full md:grid hidden place-items-center">
+            <ul class="flex justify-between items-center lg:gap-28 md:gap-16 gap-12 text-primary-v2 font-medium tracking-wider uppercase text-sm cursor-pointer">
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Home</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Products</a>
+                </li>
+                <li class="hover:text-secondary_v2 relative" id="blogDropdown">
+                    <a class="flex gap-1" href="#">Blogs <i class="fa-solid fa-angle-down mt-1"></i></a>
+                    <ul class="absolute hidden bg-secondary pl-2 py-2 mt-1 rounded-md shadow-lg w-32">
+                        <li class="hover:text-secondary_v2"><a href="/blog.html">Blog 1</a></li>
+                        <li class="hover:text-secondary_v2"><a href="/blog.html">Blog 2</a></li>
+                        <li class="hover:text-secondary_v2"><a href="/blog.html">Blog 3</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Contact Us</a>
+                </li>
+                 <!-- <li class="hover:text-secondary_v2">
+                    <a href="/index.html">About Us</a>
+                </li> -->
+
+                <li class="hover:text-secondary_v2">
+                    <!-- <a href="/index.html"> -->
+                        <details class="">
+                            <summary class="main-nav__item--toggle relative js-nav-hover js-toggle">
+                                <a class="main-nav__item main-nav__item--primary main-nav__item-content" href="">
+                                    About Us <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false" role="presentation" class="icon"><path d="M20 8.5 12.5 16 5 8.5" stroke="currentColor" stroke-width="1.5" fill="none"></path></svg>
+                              </a>
+                            </summary>
+                            <div class="main-nav__child has-motion">
+                              
+                                <ul class="child-nav child-nav--dropdown">
+                                  <li class="md:hidden">
+                                    <button type="button" class="main-nav__item main-nav__item--back relative js-back">
+                                      <div class="main-nav__item-content text-start">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" role="presentation" class="icon"><path d="m6.797 11.625 8.03-8.03 1.06 1.06-6.97 6.97 6.97 6.97-1.06 1.06z"></path></svg> Back</div>
+                                    </button>
+                                  </li>
+    
+                                  <li class="md:hidden">
+                                    <a href="" class="main-nav__item child-nav__item large-text main-nav__item-header">About Us</a>
+                                  </li><li><a class="main-nav__item child-nav__item" href="" target="_blank">About 1
+                                          </a></li><li><a class="main-nav__item child-nav__item" href="" target="_blank">About 2
+                                          </a></li><li><a class="main-nav__item child-nav__item" href="" target="_blank">About 3
+                                          </a></li></ul></div>
+                          </details>  
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="fixed top-0 left-0 h-screen w-screen hidden" id="sidemenu">
+        <div class="bg-white min-w-96 h-full p-10">
+            <button id="close_menu" class="text-center p-5 bg-secondary_v2 text-2xl w-full">x</button>
+            <form class="grid pt-10">
+                <div class="border flex justify-center">
+                    <input class="px-5 py-2 outline-none font-medium text-neural" type="text" name="search" id="search" placeholder="Search...">
+                    <button class="px-8 bg-secondary_v2" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <select class="py-3 px-5 outline-none font-medium text-neural bg-secondary_v2" name="category" id="category">
+                    <option value="">All Category</option>
+                    <option value="Beauty">Beauty</option>
+                    <option value="Electronic">Electronic</option>
+                    <option value="Devices">Devices</option>
+                </select>
+            </form>
+            <ul class="grid gap-5 pt-10 items-center text-primary-v2 font-medium tracking-wider uppercase text-sm cursor-pointer">
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Home</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Products</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Blogs</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">Contact Us</a>
+                </li>
+                <li class="hover:text-secondary_v2">
+                    <a href="/index.html">About Us</a>
+                </li>
+            </ul>
+
+            </div>
+            <div class="flex gap-6 text-xl pt-10">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+        <div class="bg-black opacity-15 h-full w-full"></div>
+    </div>
+
+<!-- Hero section -->
+<section>
+    
+    </section>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/2d9122b2bd.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind Config file -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assets/js/tailwindConfig.js"></script>
+    <script src="./assets/js/base.js"></script>
+    <script src="assets/js/dropdown.js"></script>
+
+    <!-- JavaScript link -->
+</body>
+</html>
