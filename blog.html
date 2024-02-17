@@ -21,15 +21,17 @@
         display: inline-flex;
         align-items: center;
        }
-       @media(min-width:769px)
-       .main-nav__item--primary, .secondary-nav__item{
+       @media (min-width: 769px) {
+    .main-nav__item--primary,
+    .secondary-nav__item {
         display: block;
         margin: 0 1.2rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
         transition: box-shadow 0.1s;
         line-height: 1.2rem;
-       }
+    }
+    }
        .main-nav__item, .secondary-nav__item{
         color: brown;
        }
@@ -92,8 +94,14 @@
                 <li class="hover:text-secondary_v2">
                     <a href="/index.html">Products</a>
                 </li>
-                <li class="hover:text-secondary_v2">
-                    <a href="/index.html">Blogs</a>
+                <li class="hover:text-secondary_v2 relative" id="blogDropdown">
+                    <a class="flex gap-1" href="#">Blogs <i class="fa-solid fa-angle-down mt-1"></i></a>
+                    <ul class="absolute hidden bg-secondary pl-2 py-2 mt-1 rounded-md shadow-lg w-32">
+                        <li class="hover:text-secondary_v2"><a href="/blog.html">Blog 1</a></li>
+                        <li class="hover:text-secondary_v2"><a href="/blog.html">Blog 2</a></li>
+                        <li class="hover:text-secondary_v2"><a href="/blog.html">Blog 3</a></li>
+                        
+                    </ul>
                 </li>
                 <li class="hover:text-secondary_v2">
                     <a href="/index.html">Contact Us</a>
@@ -168,6 +176,8 @@
                     <a href="/index.html">About Us</a>
                 </li>
             </ul>
+
+            </div>
             <div class="flex gap-6 text-xl pt-10">
                 <i class="fa-solid fa-heart"></i>
                 <i class="fa-solid fa-user"></i>
@@ -178,29 +188,9 @@
     </div>
 
 <!-- Hero section -->
-<Section class="grid md:grid-cols-2 xl:px-36 lg:px-20 md:px-16 sm:px-10 px-8 py-7 gap-7 text-secondary">
-    <div class="hero_img1 p-12 shadow-xl rounded-xl flex flex-col items-start gap-3">
-        <p class="text-sm font-medium text-primary">Discover, Click, Delight</p>
-        <p class="text-3xl font-bold">Your Ultimate Online Retail Destination</p>
-        <p>Welcome to ShopSmart, where convenience meets quality. Explore a vast array of products, from everyday essentials to unique finds.</p>
-        <button class="bg-secondary px-8 py-3 text-secondary_v2 font-medium rounded-full uppercase tracking-wider">Show Now</button>
-    </div>
-    <div class="grid gap-8">
-        <div class="hero_img2 p-12 shadow-xl rounded-xl flex flex-col items-start gap-3">
-            <p class="text-sm font-medium text-primary">Discover, Click, Delight</p>
-            <p class="text-3xl font-bold">Your Ultimate Online Retail Destination</p>
-            <p>Welcome to ShopSmart, where convenience meets quality. Explore a vast array of products, from everyday essentials to unique finds.</p>
-            <button class="bg-secondary px-8 py-3 text-secondary_v2 font-medium rounded-full uppercase tracking-wider">Show Now</button>
-        </div>
-        <div class="hero_img3 p-12 shadow-xl rounded-xl flex flex-col items-start gap-3">
-            <p class="text-sm font-medium text-primary">Discover, Click, Delight</p>
-            <p class="text-3xl font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, placeat?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non vero atque. Dicta aliquid distinctio laudantium quasi sit, labore non eligendi assumenda blanditiis? Doloribus ea aliquid quisquam quas, accusamus voluptatum!.</p>
-            <button class="bg-secondary px-8 py-3 text-secondary_v2 font-medium rounded-full uppercase tracking-wider">Show Now</button>
-        </div>
-    </div>
-</Section>
-
+<section>
+    
+    </section>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/2d9122b2bd.js" crossorigin="anonymous"></script>
 
@@ -208,7 +198,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/js/tailwindConfig.js"></script>
     <script src="./assets/js/base.js"></script>
-    
+    <script src="assets/js/dropdown.js"></script>
 
     <!-- JavaScript link -->
 </body>
