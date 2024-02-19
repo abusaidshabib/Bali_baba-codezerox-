@@ -1,6 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", function(){
-    fetch("https://hexabazaar-abusaidshabib.vercel.app/products")
+    fetch('https://dummyjson.com/products/1')
     .then(response => response.json())
     .then(data => {
         const productContainer = document.getElementById("products-container");
